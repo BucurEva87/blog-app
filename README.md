@@ -105,6 +105,21 @@ Install this project with:
 
 ### Usage
 
+You will need to create a database and run the migrations.
+At this moment the project expects you to have a database
+named `blog_app_development`. You can create this database
+by running the following command:
+
+```sh
+  createdb blog_app_development
+```
+
+After you have created the database run the migrations:
+
+```sh
+  rails db:migrate
+```
+
 To run the project, execute the following command:
 
 ```sh
