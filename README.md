@@ -140,7 +140,7 @@ command:
   rspec ./spec/models
 ```
 
-<!-- ### Deployment -->
+### Deployment
 
 <!-- You can deploy this project using: -->
 
