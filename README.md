@@ -126,19 +126,21 @@ To run the project, execute the following command:
   rails server
 ```
 
- <!-- ### Run tests -->
-
-<!-- To run tests, run the following command: -->
-
-<!--
-Example command:
+Before you'll be able to run tests you will need to create
+a test database using the following command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  createdb blog_app_test
 ```
-- -->
 
-### Deployment
+After this you will be able to run tests by using the followin
+command:
+
+```sh
+  rspec ./spec/models
+```
+
+<!-- ### Deployment -->
 
 <!-- You can deploy this project using: -->
 
