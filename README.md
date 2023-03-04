@@ -189,6 +189,12 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🙏 Acknowledgements <a name="acknowledgements">
+
+Perhaps in time I will find someone to mention here. Not for the time being yet.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- FAQ (optional) -->
 
 <!-- ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
