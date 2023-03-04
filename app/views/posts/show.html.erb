@@ -1,1 +1,22 @@
-<p>In this page a certain post (based on parmeter) of a requested user (based on another patameter) will be displayed.</p>
+<div id="posts-show">
+  <div class="post">
+    <h2 class="post-title"><%= @post.title %></h2>
+    <span class="post-id">#<%= @post.id %></span> 
+    by <span class="post-author"><%= @post.author.name %></span>
+    <div class="post-info">
+      <p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+    </div>
+    <p class="post-body"><%= @post.text %></p>
+  </div>
+  <div class="post-comments">
+    <ul>
+      <% @post.comments.each.with_index(1) do |comment, index| %>
+        <li>
+          <span class="author-name"><%= comment.author.name %>: </span>
+          <span class="comment-body"><%= comment.text %></span>
+          <span class="comment-id">#<%= index %></span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

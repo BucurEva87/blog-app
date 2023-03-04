@@ -1,1 +1,13 @@
-<p>In this page all the users will be displayed.</p>
+<div id="users-index">
+  <ul>
+    <% @users.each do |user| %>
+      <li class="user-card">
+        <img src="<%= user.photo %>" alt="User photo">
+        <div class="user-info">
+          <h2><%= user.name %></h2>
+          <p> Number of posts: <%= user.posts_counter %></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

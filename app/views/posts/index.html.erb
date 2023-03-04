@@ -1,1 +1,38 @@
-<p>In this page all the posts of a given user (based on the received parameter) will be displayed.</p>
+<div id="posts-index">
+  <div class="user-card">
+    <img src="<%= @user.photo %>" alt="User photo">
+    <div class="user-info">
+      <h2><%= @user.name %></h2>
+      <p> Number of posts: <%= @user.posts_counter %></p>
+    </div>
+  </div>
+
+  <ul class="user-posts">
+    <% @posts.each.with_index(1) do |post, index| %>
+      <li class="post">
+        <h2 class="post-title">
+          <%= post.title %>
+          <span class="post-id">#<%= index %></span>
+        </h2>
+        <p class="post-body"><%= post.text %></p>
+        <div class="post-info">
+          <p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+        </div>
+      </li>
+      <li class="post-comments">
+        <ul>
+          <% post.comments.each.with_index(1) do |comment, index| %>
+            <li>
+              <span class="author-name"><%= comment.author.name %>: </span>
+              <span class="comment-body"><%= comment.text %></span>
+              <span class="comment-id">#<%= index %></span>
+            </li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+    <li class="user-posts-more">
+      <button>Pagination</button>
+    </li>
+  </ul>
+</div>
