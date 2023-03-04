@@ -191,7 +191,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## 🙏 Acknowledgements <a name="acknowledgements">
 
-Perhaps in time I will find someone to mention here. Not for the time being yet.
+- **Eric Meyer** for his wonderful <a href="https://meyerweb.com/eric/tools/css/reset/">CSS Reset</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

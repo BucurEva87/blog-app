@@ -1,0 +1,33 @@
+#users-index {
+  margin-top: 5vh;
+  width: 60vw;
+}
+
+#users-index .user-card {
+  display: flex;
+  margin-bottom: 3.2rem;
+  gap: 4rem;
+}
+
+#users-index .user-card > img {
+  transform: scale(1.1);
+}
+
+#users-index .user-info {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+  border: solid 0.3rem black;
+}
+
+#users-index .user-info h2 {
+  align-self: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+#users-index .user-info p {
+  align-self: flex-end;
+  font-size: 2rem;
+}
