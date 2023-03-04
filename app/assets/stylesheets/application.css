@@ -14,25 +14,25 @@
  *= require_self
  */
 
- *,
- *::before,
- *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- }
+}
 
- html {
+html {
   font-size: 10px;
- }
+}
 
- body {
+body {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
- }
+}
 
- ul {
+ul {
   list-style-type: none;
- }
+}

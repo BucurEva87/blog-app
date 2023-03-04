@@ -3,7 +3,7 @@
   width: 60vw;
 }
 
-#users-show .user-card  {
+#users-show .user-card {
   display: flex;
   margin-bottom: 3.2rem;
   gap: 4rem;

@@ -3,7 +3,7 @@
   width: 60vw;
 }
 
-#posts-index .user-card  {
+#posts-index .user-card {
   display: flex;
   margin-bottom: 3.2rem;
   gap: 4rem;
