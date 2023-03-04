@@ -106,3 +106,8 @@
 #posts-index .user-posts-more button:active {
   box-shadow: none;
 }
+
+#posts-index .user-posts-more button a {
+  text-decoration: none;
+  color: black;
+}

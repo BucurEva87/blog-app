@@ -90,3 +90,8 @@
 #users-show .user-posts-more button:active {
   box-shadow: none;
 }
+
+#users-show .user-posts-more button a {
+  text-decoration: none;
+  color: black;
+}

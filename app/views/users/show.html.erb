@@ -13,7 +13,7 @@
   </div>
 
   <ul class="user-posts">
-    <% @posts.each.with_index(1) do |post, index| %>
+    <% @user.most_recent_posts.each.with_index(1) do |post, index| %>
       <li class="post">
         <h2 class="post-title">
           <%= post.title %>
@@ -26,7 +26,9 @@
       </li>
     <% end %>
     <li class="user-posts-more">
-      <button>See all posts</button>
+      <button>
+        <%= link_to "See all posts", user_posts_path(@user) %>
+      </button>
     </li>
   </ul>
 </div>

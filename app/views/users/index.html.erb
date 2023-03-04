@@ -4,7 +4,7 @@
       <li class="user-card">
         <img src="<%= user.photo %>" alt="User photo">
         <div class="user-info">
-          <h2><%= user.name %></h2>
+          <h2><%= link_to user.name, user_path(user) %></h2>
           <p> Number of posts: <%= user.posts_counter %></p>
         </div>
       </li>

@@ -21,7 +21,7 @@
       </li>
       <li class="post-comments">
         <ul>
-          <% post.comments.each.with_index(1) do |comment, index| %>
+          <% post.most_recent_comments.each.with_index(1) do |comment, index| %>
             <li>
               <span class="author-name"><%= comment.author.name %>: </span>
               <span class="comment-body"><%= comment.text %></span>
