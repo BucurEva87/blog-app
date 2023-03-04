@@ -10,14 +10,14 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  <!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  <!-- - [Deployment](#triangular_flag_on_post-deployment) -->
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -64,9 +64,9 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
-> This project has no live demo for the time being
+> This project has no live demo for the time being -->
 
 <!-- - [Live Demo Link](https://yourdeployedapplicationlink.com) -->
 
@@ -140,7 +140,7 @@ command:
   rspec ./spec/models
 ```
 
-### Deployment
+<!-- ### Deployment -->
 
 <!-- You can deploy this project using: -->
 
@@ -152,7 +152,7 @@ Example:
 ```
  -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -186,6 +186,12 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 > If you like this project, please be kind and give it a star. I'd really appreciate ^\_^
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgements <a name="acknowledgements">
+
+Perhaps in time I will find someone to mention here. Not for the time being yet.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
