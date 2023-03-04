@@ -31,8 +31,54 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: rgb(20, 121, 216);
+}
+
+a:hover,
+a:active {
+  color: skyblue;
+}
+
+form.button_to button.btn-like {
+  margin: 1.6rem 0 0.4rem;
+}
+
+a.link-new-comment,
+form.button_to button.btn-like {
+  padding: 0.4rem 1rem;
+  background-color: grey;
+  color: yellow;
+  border: solid 0.2rem black;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+form.button_to button[type=submit]::before {
+  content: '👍';
+  padding-right: 0.7rem;
+}
+
+.link-new-comment::before {
+  content: '✏️';
+  padding-right: 0.7rem;
+}
+
+.no-comments {
+  padding-left: 1rem;
+  font-weight: bold;
 }

@@ -169,9 +169,9 @@ Example:
 > Describe 1 - 3 features you will add to the project.
 
 - [ ] **Register users**
-- [ ] **Write posts**
-- [ ] **Leave comments**
-- [ ] **React with likes**
+- [x] **Write posts**
+- [x] **Leave comments**
+- [x] **React with likes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
