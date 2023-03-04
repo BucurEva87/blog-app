@@ -1,0 +1,23 @@
+<div id="posts-new">
+  <%= link_to "Back to posts", user_posts_path, class: 'btn-back' %>
+
+  <h2>Tell us some of your great adventures!</h2>
+  
+  <%= form_with model: Post.new, url: user_posts_path, data: {turbo: false} do |form| %>
+    <% if flash[:error] %>
+      <p><%= flash[:error]%> </p>
+    <% end %>
+  
+    <div>
+    <%= form.label 'Title', class: "form-label" %>
+    <%= form.text_field :title, class: "form-control", placeholder: "Give your post a title" %>
+    </div>
+  
+    <div>
+    <%= form.label 'Text', class: "form-label"  %>
+    <%= form.text_area :text, class: "form-control" %>
+    </div>
+
+    <%= form.submit "Add Post" %>
+  <% end %>
+</div>

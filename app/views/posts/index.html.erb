@@ -7,28 +7,44 @@
     </div>
   </div>
 
+  <%=link_to "Create a new post", new_user_post_path(@user.id), class: 'link-new-post' %>
+
   <ul class="user-posts">
-    <% @posts.each.with_index(1) do |post, index| %>
+    <% @posts.each do |post| %>
       <li class="post">
         <h2 class="post-title">
-          <%= post.title %>
-          <span class="post-id">#<%= index %></span>
+          <%= link_to post.title, user_post_path(post.author_id, post.id) %>
+          <span class="post-id">#<%= post.id %></span>
         </h2>
         <p class="post-body"><%= post.text %></p>
         <div class="post-info">
           <p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
         </div>
+        <% if post.likes_counter.zero? %>
+          <%= button_to "Be the first to like this post", user_post_likes_path(user_id: post.author.id, post_id: post.id), method: :post, class: 'btn-like' %>
+        <% else %>
+          <%= button_to "Like this post", user_post_likes_path(user_id: post.author.id, post_id: post.id), method: :post, class: 'btn-like' %>
+        <% end %>
+        <% if post.comments_counter.zero? %>
+          <%= link_to "Be the first to leave a comment", new_user_post_comment_path(user_id: @current_user.id, post_id: post.id), class: "link-new-comment" %>
+        <% else %>
+          <%= link_to "Leave a comment", new_user_post_comment_path(user_id: @current_user.id, post_id: post.id), class: "link-new-comment" %>
+        <% end %>
       </li>
       <li class="post-comments">
-        <ul>
-          <% post.most_recent_comments.each.with_index(1) do |comment, index| %>
-            <li>
-              <span class="author-name"><%= comment.author.name %>: </span>
-              <span class="comment-body"><%= comment.text %></span>
-              <span class="comment-id">#<%= index %></span>
-            </li>
-          <% end %>
-        </ul>
+        <% if post.most_recent_comments.empty? %>
+          <p class="no-comments">No comments for this post yet. Be the first one to comment something!</p>
+        <% else %>
+          <ul>
+            <% post.most_recent_comments.each do |comment| %>
+              <li>
+                <span class="author-name"><%= comment.author.name %>: </span>
+                <span class="comment-body"><%= comment.text %></span>
+                <span class="comment-id">#<%= comment.id %></span>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
       </li>
     <% end %>
     <li class="user-posts-more">

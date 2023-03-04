@@ -13,16 +13,26 @@
   </div>
 
   <ul class="user-posts">
-    <% @user.most_recent_posts.each.with_index(1) do |post, index| %>
+    <% @user.most_recent_posts.each do |post| %>
       <li class="post">
         <h2 class="post-title">
-          <%= post.title %>
-          <span class="post-id">#<%= index %></span>
+          <%= link_to post.title, user_post_path(post.author_id, post.id) %>
+          <span class="post-id">#<%= post.id %></span>
         </h2>
         <p class="post-body"><%= post.text %></p>
         <div class="post-info">
           <p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
         </div>
+        <% if post.likes_counter.zero? %>
+          <%= button_to "Be the first to like this post", user_post_likes_path(user_id: post.author.id, post_id: post.id), method: :post, class: 'btn-like' %>
+        <% else %>
+          <%= button_to "Like this post", user_post_likes_path(user_id: post.author.id, post_id: post.id), method: :post, class: 'btn-like' %>
+        <% end %>
+        <% if post.comments_counter.zero? %>
+          <%= link_to "Be the first to leave a comment", new_user_post_comment_path(user_id: @current_user.id, post_id: post.id), class: "link-new-comment" %>
+        <% else %>
+          <%= link_to "Leave a comment", new_user_post_comment_path(user_id: @current_user.id, post_id: post.id), class: "link-new-comment" %>
+        <% end %>
       </li>
     <% end %>
     <li class="user-posts-more">
