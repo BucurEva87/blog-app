@@ -120,6 +120,12 @@ After you have created the database run the migrations:
   rails db:migrate
 ```
 
+To populate your database with the provided seeds, run:
+
+```sh
+  rails db:seed
+```
+
 To run the project, execute the following command:
 
 ```sh
