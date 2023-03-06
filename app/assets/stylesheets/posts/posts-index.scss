@@ -5,6 +5,18 @@ $posts-index-width: 60vw;
   margin-top: $posts-index-margin-top;
   width: $posts-index-width;
 
+  a.btn-back {
+    position: absolute;
+    font-size: 1.6rem;
+    top: 1rem;
+    left: 1rem;
+
+    &::before {
+      content: '⬅️';
+      padding-right: 1rem;
+    }
+  }
+
   .user-card {
     display: flex;
     margin-bottom: 3.2rem;
