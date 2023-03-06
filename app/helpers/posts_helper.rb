@@ -1,17 +1,21 @@
 module PostsHelper
   def like_or_first_like_button(post)
     if post.likes_counter.zero?
-      button_to "Be the first to like this post", user_post_likes_path(user_id: post.author.id, post_id: post.id), method: :post, class: 'btn-like'
+      button_to 'Be the first to like this post', user_post_likes_path(user_id: post.author.id, post_id: post.id),
+                method: :post, class: 'btn-like'
     else
-      button_to "Like this post", user_post_likes_path(user_id: post.author.id, post_id: post.id), method: :post, class: 'btn-like'
+      button_to 'Like this post', user_post_likes_path(user_id: post.author.id, post_id: post.id), method: :post,
+                                                                                                   class: 'btn-like'
     end
   end
 
   def comment_or_first_comment_link(post)
     if post.comments_counter.zero?
-      link_to "Be the first to leave a comment", new_user_post_comment_path(user_id: @current_user.id, post_id: post.id), class: "link-new-comment"
+      link_to 'Be the first to leave a comment',
+              new_user_post_comment_path(user_id: @current_user.id, post_id: post.id), class: 'link-new-comment'
     else
-      link_to "Leave a comment", new_user_post_comment_path(user_id: @current_user.id, post_id: post.id), class: "link-new-comment"
+      link_to 'Leave a comment', new_user_post_comment_path(user_id: @current_user.id, post_id: post.id),
+              class: 'link-new-comment'
     end
   end
 

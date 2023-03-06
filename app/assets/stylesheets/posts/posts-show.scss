@@ -1,0 +1,82 @@
+#posts-show {
+  margin-top: 5vh;
+  width: 60vw;
+
+  a.btn-back {
+    position: absolute;
+    font-size: 1.6rem;
+    top: 1rem;
+    left: 1rem;
+
+    &::before {
+      content: '⬅️';
+      padding-right: 1rem;
+    }
+  }
+
+  .post {
+    border: solid 0.3rem black;
+    padding: 1rem 1rem 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+
+    .post-title {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      font-size: 2.4rem;
+      display: inline-block;
+    }
+
+    .post-id {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.4rem;
+      color: blue;
+      cursor: pointer;
+    }
+
+    .post-author {
+      font-weight: bold;
+      color: blue;
+      font-size: 2rem;
+    }
+
+    .post-info {
+      position: absolute;
+      bottom: 0.3rem;
+      right: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .post-comments {
+    border: solid 0.3rem black;
+    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+
+    li {
+      position: relative;
+      padding: 0 1rem;
+    }
+
+    .author-name {
+      font-weight: bold;
+      color: blue;
+      cursor: pointer;
+    }
+
+    .comment-body {
+      font-style: italic;
+    }
+
+    .comment-id {
+      position: absolute;
+      right: 1rem;
+      color: blue;
+      cursor: pointer;
+    }
+  }
+}

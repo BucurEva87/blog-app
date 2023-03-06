@@ -1,4 +1,6 @@
 <div id="posts-show">
+  <%= link_to "Back to posts", user_posts_path, class: 'btn-back' %>
+
   <div class="post">
     <%= display_post(@post) %>
   </div>
