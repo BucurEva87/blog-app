@@ -162,6 +162,12 @@ Example:
 - Twitter: [@BucurEva](https://twitter.com/BucurEva)
 - LinkedIn: [Eva-Lavinia Bucur](https://www.linkedin.com/in/eva-lavinia-bucur)
 
+👤 **Valentine Blaze**
+
+- GitHub: [@V-blaze](https://github.com/V-Blaze)
+- Twitter: [@blaze_valentine](https://twitter.com/blaze_valentine)
+- LinkedIn: [@valentine-blaze](https://www.linkedin.com/in/valentine-blaze/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
