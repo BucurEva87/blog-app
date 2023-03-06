@@ -1,10 +1,12 @@
 <div id="comments-new">
+  <%= link_to "Back to posts", user_posts_path, class: 'btn-back' %>
+
   <h2>Send us your thoughts through this comment!</h2>
   <%= form_with model: @comment, url: user_post_comments_path, data: { turbo: false} do |form| %>      
     <div>
       <%= form.label 'Comment', class: "form-label" %>
       <%= form.text_area :text, class: "form-control", placeholder: "Please be kind when commenting!" %>
     </div>
-    <%= form.submit "Post Comments" %>
+    <%= form.submit "Post Comment" %>
   <% end %>
 </div>

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  helper PostsHelper
+
   def index
     @current_user = current_user
     @users = User.all
