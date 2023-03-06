@@ -12,7 +12,7 @@
   <%=link_to "Create a new post", new_user_post_path(@user.id), class: 'link-new-post' %>
 
   <ul class="user-posts">
-    <% @posts.each do |post| %>
+    <% @user.posts.each do |post| %>
       <li class="post">
         <%= display_post(post) %>
       </li>
