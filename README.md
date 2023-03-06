@@ -156,7 +156,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Eva Bucur**
+👤 **Eva-Lavinia Bucur**
 
 - GitHub: [@BucurEva87](https://github.com/BucurEva87)
 - Twitter: [@BucurEva](https://twitter.com/BucurEva)
