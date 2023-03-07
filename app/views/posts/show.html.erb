@@ -2,7 +2,7 @@
   <%= link_to "Back to posts", user_posts_path, class: 'btn-back' %>
 
   <div class="post">
-    <%= display_post(@post) %>
+    <%= display_post(@post, author: true) %>
   </div>
 
   <div class="post-comments">
