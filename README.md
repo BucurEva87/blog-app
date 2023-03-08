@@ -120,6 +120,12 @@ After you have created the database run the migrations:
   rails db:migrate
 ```
 
+To populate your database with the provided seeds, run:
+
+```sh
+  rails db:seed
+```
+
 To run the project, execute the following command:
 
 ```sh
@@ -156,11 +162,17 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Eva Bucur**
+👤 **Eva-Lavinia Bucur**
 
 - GitHub: [@BucurEva87](https://github.com/BucurEva87)
 - Twitter: [@BucurEva](https://twitter.com/BucurEva)
 - LinkedIn: [Eva-Lavinia Bucur](https://www.linkedin.com/in/eva-lavinia-bucur)
+
+👤 **Valentine Blaze**
+
+- GitHub: [@V-blaze](https://github.com/V-Blaze)
+- Twitter: [@blaze_valentine](https://twitter.com/blaze_valentine)
+- LinkedIn: [@valentine-blaze](https://www.linkedin.com/in/valentine-blaze/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

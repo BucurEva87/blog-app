@@ -19,17 +19,22 @@ module PostsHelper
     end
   end
 
-  def display_post(post)
-    "<h2 class='post-title'>
-      #{link_to(post.title, user_post_path(post.author_id, post.id))}
-      <span class='post-id'>##{post.id}</span>
+  def display_post(post, author: false)
+    output = "<h2 class='post-title'>
+      #{link_to(post.title, user_post_path(post.author_id, post.id))}"
+
+    output += "<p>by #{link_to post.author.name, user_path(@post.author_id), class: 'post-author'}</p>" if author
+
+    output += "<span class='post-id'>##{post.id}</span>
     </h2>
     <p class='post-body'>#{post.text}</p>
     <div class='post-info'>
       <p>Comments: #{post.comments_counter}, Likes: #{post.likes_counter}</p>
     </div>
     #{like_or_first_like_button(post)}
-    #{comment_or_first_comment_link(post)}".html_safe
+    #{comment_or_first_comment_link(post)}"
+
+    output.html_safe
   end
 
   def display_comment(post)

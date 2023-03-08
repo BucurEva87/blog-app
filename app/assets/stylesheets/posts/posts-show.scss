@@ -25,7 +25,14 @@
       margin-bottom: 1rem;
       font-weight: bold;
       font-size: 2.4rem;
-      display: inline-block;
+      display: flex;
+      align-items: flex-end;
+
+      > p {
+        margin-left: 2rem;
+        font-weight: normal;
+        font-size: 1.6rem;
+      }
     }
 
     .post-id {
@@ -38,9 +45,8 @@
     }
 
     .post-author {
-      font-weight: bold;
-      color: blue;
       font-size: 2rem;
+      font-weight: bolder;
     }
 
     .post-info {
