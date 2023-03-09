@@ -47,6 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_132125) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "photo"
+    t.string "email"
     t.text "bio"
     t.integer "posts_counter", default: 0
     t.datetime "created_at", null: false
