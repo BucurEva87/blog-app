@@ -40,7 +40,8 @@ module PostsHelper
       :destroy, post
     )
       output += button_to 'Delete post', user_post_path(post.author, post), method: :delete,
-                                                                            data: { confirm: 'Are you sure?' }, class: 'btn-delete'
+                                                                            data: { confirm: 'Are you sure?' },
+                                                                            class: 'btn-delete'
     end
     unless user_signed_in?
       output += "<p class='guest-no-comment-like'>You need to be #{link_to 'authenticated', new_user_session_path}
