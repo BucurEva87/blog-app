@@ -32,11 +32,20 @@ module PostsHelper
       <p>Comments: #{post.comments_counter}, Likes: #{post.likes_counter}</p>
     </div>"
 
-    output += "#{like_or_first_like_button(post)}
-               #{comment_or_first_comment_link(post)}<br>" if user_signed_in?
-    output += button_to 'Delete post', user_post_path(post.author, post), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-delete' if can?(:destroy, post)
-    output += "<p class='guest-no-comment-like'>You need to be #{link_to 'authenticated', new_user_session_path}
-      in order to comment to or like this post</p>" unless user_signed_in?
+    if user_signed_in?
+      output += "#{like_or_first_like_button(post)}
+                 #{comment_or_first_comment_link(post)}<br>"
+    end
+    if can?(
+      :destroy, post
+    )
+      output += button_to 'Delete post', user_post_path(post.author, post), method: :delete,
+                                                                            data: { confirm: 'Are you sure?' }, class: 'btn-delete'
+    end
+    unless user_signed_in?
+      output += "<p class='guest-no-comment-like'>You need to be #{link_to 'authenticated', new_user_session_path}
+        in order to comment to or like this post</p>"
+    end
 
     output.html_safe
   end
@@ -53,7 +62,12 @@ module PostsHelper
         </span>"
         comments_html += "<span class='author-name'>#{link_to comment.author.name, user_path(comment.author)}: </span>"
         comments_html += "<span class='comment-body'>#{comment.text}</span>"
-        comments_html += button_to 'Delete comment', user_post_comments_path(comment.author, comment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-delete' if can?(:destroy, comment)
+        if can?(
+          :destroy, comment
+        )
+          comments_html += button_to 'Delete comment', user_post_comment_path(comment.author, post, comment),
+                                     method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-delete'
+        end
         comments_html += "<span class='comment-id'>##{comment.id}</span>"
         comments_html += '</li>'
       end
