@@ -1,0 +1,32 @@
+@import 'variables';
+
+#flash-section {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 50vw;
+  height: 4rem;
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-align: center;
+  padding: 1rem 3rem;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.alert {
+    background-color: pink;
+    color: red;
+  }
+
+  &.notice {
+    background-color: lightblue;
+    color: forestgreen;
+  }
+
+  &.fadeOut {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+}

@@ -180,7 +180,7 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **Register users**
+- [x] **Register users**
 - [x] **Write posts**
 - [x] **Leave comments**
 - [x] **React with likes**
@@ -197,7 +197,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> If you like this project, please be kind and give it a star. I'd really appreciate ^\_^
+> If you like this project, please be kind and give it a star. We'd really appreciate ^\_^
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

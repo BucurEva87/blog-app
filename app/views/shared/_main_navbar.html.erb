@@ -1,0 +1,25 @@
+<nav id="main-navigation">
+  <ul>
+    <% if user_signed_in? %>
+      <li>
+        Welcome,&nbsp; <%= link_to current_user.name, user_path(current_user) %>!
+      </li>
+      <li>
+        <%= link_to image_tag(current_user.photo, id: 'profile-photo'), user_path(current_user) %>
+      </li>
+      <li>
+        <%=link_to "New post", new_user_post_path(current_user.id), class: 'link-new-post' %>
+      </li>
+      <li>
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn-sign-out' %>
+      </li>
+    <% else %>
+      <li>
+        Welcome, Guest!
+      </li>
+      <li>
+        <%= link_to "Log in", new_user_session_path %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

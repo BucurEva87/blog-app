@@ -70,6 +70,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Mock up confirmation mail sending from Devise
+  gem 'letter_opener'
 end
 
 group :test do

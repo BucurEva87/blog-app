@@ -1,3 +1,5 @@
+<%= render 'shared/main_navbar' %>
+
 <div id="posts-index">
   <%= link_to "Back to users #{@user.name}", user_path(@user), class: 'btn-back' %>
 
@@ -9,7 +11,9 @@
     </div>
   </div>
 
-  <%=link_to "Create a new post", new_user_post_path(@user.id), class: 'link-new-post' %>
+  <% if user_signed_in? && current_user.name == @user.name %>
+    <%=link_to "Create a new post", new_user_post_path(@user.id), class: 'link-new-post' %>
+  <% end %>
 
   <ul class="user-posts">
     <% @user.posts.each do |post| %>

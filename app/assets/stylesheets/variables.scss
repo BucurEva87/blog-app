@@ -1,0 +1,10 @@
+// Colors
+$blue: rgb(20, 121, 216);
+$lightBlue: lighten($blue, 15%);
+$grey: grey;
+$black: black;
+$yellow: yellow;
+
+$primaryFontFamily: verdana, geneva, tahoma, sans-serif;
+$primaryLinkColor: $blue;
+$primaryLinkActiveColor: $lightBlue;

@@ -11,8 +11,19 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice.present? || alert.present? %>
+      <script>
+        setTimeout(() => document.querySelector('#flash-section').classList.add('fadeOut'), 5000);
+      </script>
+      <div id="flash-section" class="<%= alert.present? ? 'alert' : 'notice' %>">
+        <% if notice.present? %>
+          <p class="notice"><%= notice %></p>
+        <% end %>
+        <% if alert.present? %>
+          <p class="alert"><%= alert %></p>
+        <% end %>
+      </div>
+    <% end %>
 
     <%= yield %>
   </body>
