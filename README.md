@@ -180,7 +180,7 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **Register users**
+- [x] **Register users**
 - [x] **Write posts**
 - [x] **Leave comments**
 - [x] **React with likes**
