@@ -36,6 +36,9 @@ gem 'sassc-rails'
 # Devise authentication
 gem 'devise'
 
+# CanCan authorization
+gem 'cancan'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
