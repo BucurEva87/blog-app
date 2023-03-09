@@ -20,6 +20,8 @@
     gap: 4rem;
 
     > img {
+      width: 128px;
+      height: 128px;
       transform: scale(1.1);
     }
   }
@@ -41,6 +43,12 @@
       align-self: flex-end;
       font-size: 2rem;
     }
+  }
+
+  .link-new-post {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
   }
 
   .user-bio {

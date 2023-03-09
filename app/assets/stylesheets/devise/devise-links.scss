@@ -1,0 +1,16 @@
+ul#devise-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  margin-left: 7rem;
+
+  li + li {
+    border-left: solid 0.1rem black;
+    padding-left: 1rem;
+  }
+
+  a {
+    font-size: 1.8rem;
+  }
+}
