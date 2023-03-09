@@ -20,6 +20,8 @@ class User < ApplicationRecord
   private
 
   def set_default_photo
-    self.photo = 'https://www.tenforums.com/attachments/tutorials/146359d1501443008-change-default-account-picture-windows-10-a-user.png?s=db781d9974e669b888847edf87cb6271' if self.photo.blank?
+    return unless photo.blank?
+
+    self.photo = 'https://www.tenforums.com/attachments/tutorials/146359d1501443008-change-default-account-picture-windows-10-a-user.png?s=db781d9974e669b888847edf87cb6271'
   end
 end
