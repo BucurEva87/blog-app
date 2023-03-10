@@ -11,16 +11,16 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users do
     resources :posts do
-      resources :comments, only: [:index, :new, :create, :destroy]
+      resources :comments, only: [:new, :create, :destroy]
       resources :likes, only: [:create, :destroy]
     end
   end
 
   namespace :api do
     namespace :v1 do
-      resources :users, only: %i[index show create] do
-        resources :posts, only: %i[index show create] do
-          resources :comments, only: %i[index show create]
+      resources :users, only: [:index, :show, :create] do
+        resources :posts, only: [:index, :show, :create] do
+          resources :comments, only: [:index, :show, :create]
         end
       end
     end
