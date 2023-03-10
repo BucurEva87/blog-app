@@ -37,6 +37,7 @@ class Ability
       can :read, :all # everyone can read everything
       can :create, Comment # everyone can create comments
       can :destroy, Comment, author_id: user.id # users can delete their own comments
+      can :create, Post #everyone can create posts
       can :destroy, Post, author_id: user.id # users can delete their own posts
     end
   end
