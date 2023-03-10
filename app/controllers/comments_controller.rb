@@ -1,17 +1,18 @@
 class CommentsController < ApplicationController
   load_and_authorize_resource
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:create]
 
   def new
     @comment = Comment.new
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.build(comment_params)
     @comment.author = current_user
-    @comment.post_id = (params[:post_id])
+
     if @comment.save
-      redirect_to user_post_path(current_user.id, @comment.post_id)
+      redirect_to user_post_path(current_user, @post), notice: 'Comment was successfully created.'
     else
       render plain: @comment.errors.messages
     end
