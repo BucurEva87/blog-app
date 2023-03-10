@@ -39,6 +39,9 @@ gem 'devise'
 # CanCan authorization
 gem 'cancancan'
 
+# Rswag for API documentation
+gem 'rswag'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

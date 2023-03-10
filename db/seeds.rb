@@ -8,10 +8,10 @@
 
 # Create some users
 User.create!([
-  { name: "Tom", photo: "https://randomuser.me/api/portraits/men/60.jpg", 
-    bio: "Teacher from Mexico.", posts_counter: 0 },
-  { name: "Lilly", photo: "https://randomuser.me/api/portraits/women/56.jpg", 
-    bio: "Teacher from Poland.", posts_counter: 0 }
+  { name: "BucurEva", photo: "https://randomuser.me/api/portraits/men/60.jpg", 
+    bio: "Teacher from Mexico.", posts_counter: 0, email: 'bucur.eva87@gmail.com', password: 'whatever101' },
+  { name: "Valentine", photo: "https://randomuser.me/api/portraits/women/56.jpg", 
+    bio: "Teacher from Poland.", posts_counter: 0, email: 'valentine@gmail.com', password: 'whatever102' }
  ])
 # Create some posts for Tom and Lilly
 Post.create!([
