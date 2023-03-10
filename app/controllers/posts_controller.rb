@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!
+
   def index
     @current_user = current_user
     @user = User.includes(posts: { comments: :author }).find(params[:user_id])
@@ -21,6 +24,13 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    authorize! :destroy, @post
+    @post.destroy
+    redirect_to root_path, notice: 'Post was successfully deleted.'
   end
 
   private

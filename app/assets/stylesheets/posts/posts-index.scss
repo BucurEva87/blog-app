@@ -1,3 +1,5 @@
+@import 'variables';
+
 $posts-index-margin-top: 5vh;
 $posts-index-width: 60vw;
 
@@ -113,6 +115,7 @@ $posts-index-width: 60vw;
 
         .comment-id {
           position: absolute;
+          top: 0.5rem;
           right: 1rem;
           color: blue;
           cursor: pointer;
@@ -139,6 +142,23 @@ $posts-index-width: 60vw;
           color: black;
         }
       }
+    }
+  }
+
+  button.btn-delete {
+    padding: 0.3rem 1rem;
+    background-color: $grey;
+    color: $yellow;
+    border: solid 0.2rem $black;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin-top: 0.4rem;
+    cursor: pointer;
+
+    &::before {
+      content: '❗';
+      padding-right: 0.7rem;
     }
   }
 }
