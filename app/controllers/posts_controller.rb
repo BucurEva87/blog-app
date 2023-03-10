@@ -1,10 +1,15 @@
 class PostsController < ApplicationController
   load_and_authorize_resource
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:create]
 
   def index
     @current_user = current_user
     @user = User.includes(posts: { comments: :author }).find(params[:user_id])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @user.posts }
+    end
   end
 
   def show

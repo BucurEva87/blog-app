@@ -1,19 +1,37 @@
 class CommentsController < ApplicationController
   load_and_authorize_resource
-  before_action :authenticate_user!
+  # before_action :authenticate_user!, only: [:create]
+
+  def index
+    @post = Post.find(params[:post_id])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @post.comments }
+    end
+  end
 
   def new
     @comment = Comment.new
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @post = Post.find(params[:post_id])
+    # @comment = Comment.new(comment_params)
+    @comment = @post.comments.build(comment_params)
     @comment.author = current_user
-    @comment.post_id = (params[:post_id])
-    if @comment.save
-      redirect_to user_post_path(current_user.id, @comment.post_id)
-    else
-      render plain: @comment.errors.messages
+
+    respond_to do |format|
+      puts 'Presenting the format'
+      p format
+
+      if @comment.save
+        format.html { redirect_to user_post_path(current_user, @post), notice: 'Comment was successfully created.' }
+        format.json { render json: @comment, status: :created }
+      else
+        format.html { render plain: @comment.errors.messages }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
     end
   end
 
